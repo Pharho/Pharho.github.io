@@ -389,7 +389,8 @@ section.module p:last-child {
 section.module.content {
   padding: 40px 0;
 }
-section.module.parallax {
+@media screen and (min-width:480px) {
+    section.module.parallax {
   height: 600px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -408,19 +409,58 @@ section.module.parallax h1 {
   text-transform: uppercase;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-@media screen and (min-width:480px)
-{
-section.module.parallax-1 {
-  background-image: url("../img/parallax-1.jpg");
+    section.module.parallax-1 {
+        background-image: url("../img/parallax-1.jpg");
+    }
 }
+@media screen and (min-width:480px) {
+    section.module.parallax {
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-section.module.parallax-2 {
-  background-image: url("../img/parallax-2.jpg");
+section.module.parallax h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 48px;
+  line-height: 600px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-section.module.parallax-3 {
-  background-image: url("../img/parallax-3.jpg");
+    section.module.parallax-2 {
+        background-image: url("../img/parallax-2.jpg");
+    }
 }
-
+@media screen and (min-width:480px) {
+    section.module.parallax {
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+section.module.parallax h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 48px;
+  line-height: 600px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+    section.module.parallax-3 {
+        background-image: url("../img/parallax-3.jpg");
+    }
+}
 @media all and (min-width: 600px) {
   section.module h2 {
     font-size: 42px;
@@ -439,6 +479,7 @@ section.module.parallax-3 {
 }
 
 @media (min-width: 768px){section{padding:50px 0 !important}}
+
 
 
 .modal{
@@ -505,6 +546,18 @@ a:hover{color:pink}
   color:grey;
   text-decoration: underline;
 }
+.backgroundSecondSection
+{
+  background:url("../img/backgroundSecondSection.png");
+}
+.backgroundThirdSection
+{
+  background:url("../img/backgroundThirdSection.png");
+}
+.backgroundFourthSection
+{
+  background:url("../img/backgroundFourthSection.jpg");
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
     .navbar-collapse.collapse {
@@ -520,6 +573,7 @@ a:hover{color:pink}
         float:none;
     }
 }
+
 
 /* latin */
 @font-face {
