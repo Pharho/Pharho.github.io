@@ -389,7 +389,7 @@ section.module p:last-child {
 section.module.content {
   padding: 40px 0;
 }
-@media screen and (min-width:600px)
+@media screen and (min-width:736px)
 {
   section.module.parallax {
   height: 600px;
@@ -414,7 +414,7 @@ section.module.content {
     background-image: url("../img/parallax-1.jpg");
   }
 }
-@media screen and (min-width:600px) {
+@media screen and (min-width:736px) {
   section.module.parallax {
   height: 600px;
   background-position: 50% 50%;
@@ -438,22 +438,22 @@ section.module.content {
     background-image: url("../img/parallax-2.jpg");
   }
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:736px) {
   section.module.parallax-1 {
     padding:0px;
   }
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:736px) {
   section.module.parallax-2 {
     padding:0px;
   }
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:736px) {
   section.module.parallax-3 {
     padding:0px;
   }
 }
-@media screen and (min-width:600px) {
+@media screen and (min-width:736px) {
   section.module.parallax {
   height: 600px;
   background-position: 50% 50%;
@@ -477,7 +477,7 @@ section.module.content {
     background-image: url("../img/parallax-3.jpg");
   }
 }
-@media all and (min-width: 600px) {
+@media all and (min-width: 736px) {
   section.module h2 {
     font-size: 42px;
   }
