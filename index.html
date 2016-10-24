@@ -134,6 +134,29 @@ function editTextForBridesmaids(num){
         break;
     }
   }
+
+  function validation()
+  {
+    var guestname = document.getElementById('contact-form').guestname.value;
+    alert("Clicked");
+    alert(guestname);
+
+  }
+
+  function guest()
+  {
+    if(document.getElementById('contact-form').vehicle.checked)
+    {
+
+      document.getElementById("guestNameDiv").style.visibility = "visible";
+      document.getElementById("guestNameMealChoiceDiv").style.visibility = "visible";
+    }
+    else {
+      document.getElementById("guestNameDiv").style.visibility = "hidden";
+      document.getElementById("guestNameMealChoiceDiv").style.visibility = "hidden";
+    }
+  }
+
 </script>
 </head>
 
@@ -200,13 +223,27 @@ function editTextForBridesmaids(num){
     <section id="thebigday">
         <div class="container">
           <div class="row featurette">
+            <div>
+              <img src="img/engaged.png" class="img-responsive"/>
+            </div>
+            <br />
+            <div class="col-md-6">
+              <img src="img/church.png" class="img-responsive"/>
+            </div>
+            <div class="col-md-6">
+                <img src="img/american.png" class="img-responsive"/>
+            </div>
+            <!--
               <div class="col-md-7">
+                <div>
+
+                </div>
                   <img src="img/header/intro.png" class="img-responsive"/>
               </div>
               <div class="polaroid col-md-5">
                       <p style="text-align:center;">Palm Event Center</p>
                       <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="img/palm.jpg" data-holder-rendered="true">
-              </div>
+              </div>-->
           </div>
         </div>
     </section>
@@ -480,7 +517,7 @@ function editTextForBridesmaids(num){
             </div>
              <div class="row">
              <div class="col-lg-8 col-lg-offset-2" >
-               <div style="display:none;">
+               <div style="display:;">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                     <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
                     <!-- <form name="sentMessage" id="contactForm" novalidate>
@@ -519,8 +556,9 @@ function editTextForBridesmaids(num){
                                 <button type="submit" class="btn btn-success btn-lg">Send</button>
                             </div>
                         </div>
-                    </form> -->
-                    <form action="https:formspree.io/chrisandcherry.2015@gmail.com" method="post">
+                    </form>
+                    <form id="contact-form" action="https:formspree.io/chrisandcherry.2015@gmail.com" method="post">-->
+                    <form id="contact-form">
                       <div class="row control-group">
                           <div class="form-group col-xs-12 floating-label-form-group controls">
                               <label>Name</label>
@@ -545,40 +583,54 @@ function editTextForBridesmaids(num){
                       <div class="row control-group">
                           <div class="form-group col-xs-12 floating-label-form-group controls">
                               <label>Meal Choice</label>
-                              <input type="text" class="form-control" placeholder="Meal Choice" required data-validation-required-message="Please enter your meal choice." name="mealchoice">
+                              <select name="mealchoice" class="form-control">
+                                <option value="none">Select One</option>
+                                <option value="steak">New York Steak</option>
+                                <option value="chicken">Pan-Seared Chicken</option>
+                                <option value="vegetarian">Seared Polenta Cakes ala Puttanesca (Vegetarian)</option>
+                              </select>
+                              <!--<input type="text" class="form-control" placeholder="Meal Choice" required data-validation-required-message="Please enter your meal choice." name="mealchoice">-->
                               <p class="help-block text-danger"></p>
                           </div>
                       </div>
                       <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                          <input type="checkbox" name="vehicle" value="Bike" onchange="guest();"> Will a guest be attending?
+                        </div>
+                      </div>
+                      <div class="row control-group" id="guestNameDiv" style="visibility:hidden;">
                           <div class="form-group col-xs-12 floating-label-form-group controls">
                               <label>Guest Name</label>
                               <input type="text" class="form-control" placeholder="Guest Name" name="guestname">
                               <p class="help-block text-danger"></p>
                           </div>
                       </div>
-                      <div class="row control-group">
+                      <div class="row control-group" id="guestNameMealChoiceDiv" style="visibility:hidden;">
                           <div class="form-group col-xs-12 floating-label-form-group controls">
                               <label>Guest Meal Choice</label>
-                              <input type="text" class="form-control" placeholder="Guest Meal Choice" name="guestmealchoice">
+                              <select name="guestmealchoice" class="form-control">
+                                <option value="none">Select One</option>
+                                <option value="steak">New York Steak</option>
+                                <option value="chicken">Pan-Seared Chicken</option>
+                                <option value="vegetarian">Seared Polenta Cakes ala Puttanesca (Vegetarian)</option>
+                              </select>
+                              <!--<input type="text" class="form-control" placeholder="Guest Meal Choice" name="guestmealchoice">-->
                               <p class="help-block text-danger"></p>
                           </div>
                       </div>
                       <div class="row control-group">
                           <div class="form-group col-xs-12 floating-label-form-group controls">
                               <label>Song Request</label>
-                              <input type="text" class="form-control" placeholder="Song Request" name="phonenumber">
+                              <textarea type="text" class="form-control" placeholder="Song Request" name="phonenumber"></textarea>
                               <p class="help-block text-danger"></p>
                           </div>
                       </div>
-
                       <div class="row">
                           <div class="form-group col-xs-12">
-                              <input type="submit" class="btn btn-success btn-lg" value="Send" />
+                              <input type="submit" class="btn btn-success btn-lg" value="Submit" onclick="validation();" />
                           </div>
                       </div>
-
                       <input type="text" name="_gotcha" style="display:none" />
-
                     </form>
                   </div>
                   <h3 class="section-subheading text-muted text-center" >Coming Soon!</h3>
@@ -991,7 +1043,7 @@ function editTextForBridesmaids(num){
 
     <!-- jQuery -->
     <!-- <script src="js/jquery.js"></script> -->
-      <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -1014,6 +1066,7 @@ function editTextForBridesmaids(num){
 
     <script src="js/application.js"></script>
 
+    <script src="js/formspree.js"></script>
     <script>
 
       function init_map() {
