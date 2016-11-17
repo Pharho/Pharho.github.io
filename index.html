@@ -1173,8 +1173,15 @@ function editTextForBridesmaids(num){
               </div>
               <div class="row control-group">
                   <div class="form-group col-xs-12">
+                      <label>Dietary Restrictions</label>
+                      <textarea type="text" class="form-control" placeholder="Dietary Restrictions" name="dietaryrestrictions"></textarea>
+                      <p class="help-block text-danger"></p>
+                  </div>
+              </div>
+              <div class="row control-group">
+                  <div class="form-group col-xs-12">
                       <label>Song Request</label>
-                      <textarea type="text" class="form-control" placeholder="Song Request" name="phonenumber"></textarea>
+                      <textarea type="text" class="form-control" placeholder="Song Request" name="songrequest"></textarea>
                       <p class="help-block text-danger"></p>
                   </div>
               </div>
@@ -1374,7 +1381,7 @@ function validation()
   if(zf == guestname)
   {
     document.getElementById('passwordError').innerText = "";
-    document.getElementById('inputPassword').textContent = document.getElementById('passwrd').value;
+    document.getElementById('inputPassword').value = guestname;
     $('#rsvpModal').modal('show')
   }
   else {
