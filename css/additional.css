@@ -901,7 +901,7 @@ a:hover{color:pink}
 }
 
 .texts {
-	color: #fff;
+	color: #CCCCCC;
 	font-size: 30px;
 	font-weight: bold;
 	margin-top: -50px;
@@ -919,7 +919,7 @@ a:hover{color:pink}
 .texts .type-time {
 	font-size: 20px;
 }
-
+a { color:#337ab7;}
 @media (min-width: 768px) and (max-width: 991px) {
 	.clock-item {
 		margin-bottom: 30px;
